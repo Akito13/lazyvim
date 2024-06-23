@@ -18,6 +18,14 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        clangd = require("plugins.clangd"),
+      },
+    },
+  },
   require("plugins.clangd_extensions"),
   require("plugins.none-ls"),
 }
